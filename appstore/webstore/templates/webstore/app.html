@@ -1,0 +1,13 @@
+{% extends "webstore/base.html" %}
+{% load static %}
+
+
+{% block polymerimports %}
+    <link rel="import" href="{% static 'app-item/app-item.html' %}">
+{% endblock polymerimports %}
+
+{% block content %}
+    <core-toolbar class="logo-toolbar">{{ app.name }}</core-toolbar>
+
+    <app-item url="http://{{ request.get_host }}/api/apps/?uuid={{ app.uuid }}"></app-item>
+{% endblock content %}
