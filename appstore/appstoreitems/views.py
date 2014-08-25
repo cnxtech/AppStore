@@ -12,6 +12,8 @@ from .models import (
     ApiVersion
 )
 
+from .serializers import AppStoreItemSerializer
+
 
 class UserViewSet(viewsets.ModelViewSet):
     model = User
@@ -31,6 +33,7 @@ class ContentTypeViewSet(viewsets.ModelViewSet):
 
 class AppStoreItemViewSet(viewsets.ModelViewSet):
     model = AppStoreItem
+    serializer_class = AppStoreItemSerializer
 
 
 class VendorViewSet(viewsets.ModelViewSet):
