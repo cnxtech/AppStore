@@ -1,7 +1,11 @@
+from rest_framework import viewsets
+
 from django.contrib.auth.models import User, Group, Permission
 from django.contrib.contenttypes.models import ContentType
 
-from rest_framework import viewsets
+
+class PermissionViewSet(viewsets.ModelViewSet):
+    model = Permission
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -10,10 +14,6 @@ class UserViewSet(viewsets.ModelViewSet):
 
 class GroupViewSet(viewsets.ModelViewSet):
     model = Group
-
-
-class PermissionViewSet(viewsets.ModelViewSet):
-    model = Permission
 
 
 class ContentTypeViewSet(viewsets.ModelViewSet):
