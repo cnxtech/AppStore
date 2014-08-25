@@ -17,6 +17,7 @@ class ApiVersion(models.Model):
 
 
 class Version(models.Model):
+    version_no = models.CharField(max_length=10)
     api_version = models.ManyToManyField(ApiVersion)
     changelog = models.TextField()
 
@@ -29,7 +30,7 @@ class Vendor(models.Model):
 class AppStoreItem(models.Model):
     vendor = models.ForeignKey(Vendor)
     name = models.CharField(max_length=100)
-    desc = models.TextField()
+    desc = models.TextField(verbose_name="About")
     images = models.ManyToManyField(AppImage)
     platforms = models.ManyToManyField(Plattform)
     versions = models.ManyToManyField(Version)
