@@ -83,3 +83,5 @@ Session.vim
 *~
 
 db.sqlite3
+
+appstore/static/
