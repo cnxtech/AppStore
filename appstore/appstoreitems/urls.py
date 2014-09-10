@@ -20,14 +20,14 @@ router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'groups', GroupViewSet)
 router.register(r'permissions', PermissionViewSet)
-router.register(r'contenttypes', ContentTypeViewSet)
+router.register(r'content_types', ContentTypeViewSet)
 
-router.register(r'appstoreitems', AppStoreItemViewSet)
+router.register(r'apps', AppStoreItemViewSet)
 router.register(r'vendors', VendorViewSet)
-router.register(r'appimages', AppImageViewSet)
+router.register(r'app_images', AppImageViewSet)
 router.register(r'platforms', PlattformViewSet)
 router.register(r'versions', VersionViewSet)
-router.register(r'apiversions', ApiVersionViewSet)
+router.register(r'api_versions', ApiVersionViewSet)
 
 urlpatterns = patterns(
     '',
