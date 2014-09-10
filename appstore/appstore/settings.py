@@ -40,7 +40,8 @@ INSTALLED_APPS = (
     'rest_framework',
     'django_extensions',
 
-    'appstoreitems'
+    'appstoreitems',
+    'webstore'
 )
 
 MIDDLEWARE_CLASSES = (
