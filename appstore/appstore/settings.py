@@ -39,6 +39,7 @@ INSTALLED_APPS = (
 
     'rest_framework',
     'django_extensions',
+    'djangobower',
 
     'appstoreitems',
     'webstore'
@@ -91,6 +92,22 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'djangobower.finders.BowerFinder',
+)
+
+BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, '../components')
+
+BOWER_INSTALLED_APPS = (
+    "Polymer/polymer",
+    "Polymer/core-elements",
+    "Polymer/paper-elements",
+    "Azd325/platform-chooser"
+)
+
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONPRenderer',
