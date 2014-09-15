@@ -105,7 +105,8 @@ BOWER_INSTALLED_APPS = (
     "Polymer/polymer",
     "Polymer/core-elements",
     "Polymer/paper-elements",
-    "Azd325/platform-chooser"
+    "Azd325/platform-chooser",
+    "Azd325/app-item"
 )
 
 REST_FRAMEWORK = {
