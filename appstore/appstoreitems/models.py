@@ -6,10 +6,16 @@ from django_extensions.db.fields import UUIDField
 class Plattform(models.Model):
     name = models.CharField(max_length=30)
 
+    def __unicode__(self):
+        return "{0}".format(self.name)
+
 
 class AppImage(models.Model):
     name = models.CharField(max_length=50)
     image = models.ImageField()
+
+    def __unicode__(self):
+        return "{0}".format(self.name)
 
 
 class ApiVersion(models.Model):
@@ -21,10 +27,16 @@ class Version(models.Model):
     api_version = models.ManyToManyField(ApiVersion)
     changelog = models.TextField()
 
+    def __unicode__(self):
+        return "{0}".format(self.version_no)
+
 
 class Vendor(models.Model):
     name = models.CharField(max_length=100)
     url = models.URLField(max_length=200, blank=True)
+
+    def __unicode__(self):
+        return "{0}".format(self.name)
 
 
 class AppStoreItem(models.Model):
@@ -36,3 +48,6 @@ class AppStoreItem(models.Model):
     versions = models.ManyToManyField(Version)
     uuid = UUIDField()
     url = models.URLField(max_length=200)
+
+    def __unicode__(self):
+        return "{0}".format(self.name)
