@@ -34,6 +34,7 @@ class ContentTypeViewSet(viewsets.ModelViewSet):
 class AppStoreItemViewSet(viewsets.ModelViewSet):
     model = AppStoreItem
     serializer_class = AppStoreItemSerializer
+    filter_fields = ('uuid',)
 
 
 class VendorViewSet(viewsets.ModelViewSet):
