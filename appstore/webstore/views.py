@@ -1,5 +1,9 @@
 from django.views.generic import TemplateView
 
 
-class BaseView(TemplateView):
-    template_name = "webstore/base.html"
+class ListView(TemplateView):
+    template_name = "webstore/app-list.html"
+
+
+class AppView(TemplateView):
+    template_name = "webstore/app.html"

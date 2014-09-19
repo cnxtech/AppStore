@@ -1,0 +1,12 @@
+{% extends "webstore/base.html" %}
+{% load static %}
+
+
+{% block polymerimports %}
+    <link rel="import" href="{% static 'app-list/app-list.html' %}">
+{% endblock polymerimports %}
+
+{% block content %}
+    <core-toolbar></core-toolbar>
+    <app-list></app-list>
+{% endblock content %}

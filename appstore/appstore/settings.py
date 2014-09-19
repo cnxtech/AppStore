@@ -108,7 +108,8 @@ BOWER_INSTALLED_APPS = (
     "Polymer/core-elements",
     "Polymer/paper-elements",
     "Azd325/platform-chooser",
-    "Azd325/app-item"
+    "Azd325/app-item",
+    "Azd325/app-list"
 )
 
 REST_FRAMEWORK = {
@@ -126,5 +127,6 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+    ],
+    'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',)
 }
