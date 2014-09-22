@@ -8,5 +8,5 @@ from .views import (
 urlpatterns = patterns(
     '',
     url(r'^$', ListView.as_view()),
-    url(r'^app/(?P<uuid>[^/]+)/$', AppView.as_view()),
+    url(r'^app/$', AppView.as_view()),
 )
