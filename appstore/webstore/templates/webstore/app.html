@@ -8,5 +8,5 @@
 
 {% block content %}
     <core-toolbar></core-toolbar>
-    <app-item></app-item>
+    <app-item url="http://{{ request.get_host }}/api/apps/?uuid={{ request.GET.id }}"></app-item>
 {% endblock content %}
