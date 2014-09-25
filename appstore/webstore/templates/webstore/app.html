@@ -7,6 +7,7 @@
 {% endblock polymerimports %}
 
 {% block content %}
-    <core-toolbar></core-toolbar>
-    <app-item url="http://{{ request.get_host }}/api/apps/?uuid={{ request.GET.id }}"></app-item>
+    <core-toolbar class="logo-toolbar">{{ app.name }}</core-toolbar>
+
+    <app-item url="http://{{ request.get_host }}/api/apps/?uuid={{ app.uuid }}"></app-item>
 {% endblock content %}

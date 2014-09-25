@@ -12,6 +12,24 @@
     <link rel="import" href="{% static 'platform-chooser/platform-chooser.html' %}">
     <link rel="import" href="{% static 'font-roboto/roboto.html' %}">
     {% block polymerimports %}{% endblock polymerimports %}
+    <style>
+      core-header-panel[drawer] {
+        background-color: #CFD8DC;
+      }
+      core-toolbar {
+        border-bottom: 1px solid #000;
+        height: 65px;
+        background-color: #3C3E3C;
+        color:#fff;
+      }
+      body {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      }
+      .logo-toolbar {
+        background-image: url(http://openbankproject.com/static/images/header-bg.png);
+        background-repeat: no-repeat;
+      }
+    </style>
   </head>
   <body fullbleed layout vertical>
     <core-drawer-panel>
